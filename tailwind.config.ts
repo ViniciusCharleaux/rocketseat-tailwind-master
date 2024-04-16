@@ -6,9 +6,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-     colors: {
-      diego: '#8257e6'
-     }
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr'
+      },
+      colors: {
+        diego: '#8257e6'
+      }
     },
   },
   plugins: [],
