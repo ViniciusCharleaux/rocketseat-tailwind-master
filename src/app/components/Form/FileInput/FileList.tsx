@@ -4,14 +4,18 @@ import React from "react";
 import { useFileInput } from "./Root";
 import { Trash2, UploadCloud } from "lucide-react";
 import { formatBytes } from "@/app/utils/format-bytes";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 export const FileList:React.FC = () => {
   const { files } = useFileInput()
+
+  const [parent] = useAutoAnimate({
+
+  })
   
 
-
   return (
-    <div className="mt-4 flex flex-col gap-3">
+    <div ref={parent} className="mt-4 flex flex-col gap-3">
       {files.map(file => {
         return (
           <div key={file.name} className="group  flex items-start gap-4 rounded-lg border border-zinc-200 p-4 ">
