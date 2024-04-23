@@ -14,6 +14,7 @@ export const FileList:React.FC = () => {
       {files.map(file => {
         return (
           <FileItem
+            state="error"
             name={file.name}
             size={file.size}
           />
