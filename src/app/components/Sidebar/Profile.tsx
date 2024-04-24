@@ -1,7 +1,8 @@
 import { LogOut } from 'lucide-react'
 import { Button } from '../Button'
+import React from 'react'
 
-export function Profile() {
+export const Profile:React.FC = () => {
   return (
     <div className="flex justify-between items-center gap-3">
       <img

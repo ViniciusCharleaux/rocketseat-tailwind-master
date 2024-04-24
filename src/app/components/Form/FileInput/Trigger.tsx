@@ -5,9 +5,7 @@ import React from "react"
 import { useFileInput } from "./Root"
 
 export const Trigger:React.FC = () => {
-
   const { id } = useFileInput()
-
 
   return (
     <label

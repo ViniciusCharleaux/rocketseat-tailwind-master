@@ -1,4 +1,6 @@
-export function UsedSpaceWidget() {
+import React from "react"
+
+export const UsedSpaceWidget:React.FC = () => {
     return (
       <div className="flex flex-col gap-4 rounded-lg bg-violet-50 px-4 py-5 dark:bg-zinc-800 ">
         <div className="space-y-1">

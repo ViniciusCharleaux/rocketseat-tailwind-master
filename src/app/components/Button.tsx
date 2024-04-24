@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import React, { ComponentProps } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
@@ -26,6 +26,6 @@ const button = tv({
 
 export type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>
 
-export function Button({ variant, className, ...props }: ButtonProps) {
+export const Button:React.FC<ButtonProps> = ({ variant, className, ...props }) => {
   return <button {...props} className={button({ variant, className })} />
 }

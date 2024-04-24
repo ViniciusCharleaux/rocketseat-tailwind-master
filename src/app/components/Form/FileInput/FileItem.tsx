@@ -1,6 +1,7 @@
 import { Button } from '@/app/components/Button'
 import { formatBytes } from '@/app/utils/format-bytes'
 import { CheckCircle2, Trash2, UploadCloud } from 'lucide-react'
+import React from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const fileItem = tv({
@@ -39,7 +40,7 @@ export interface FileItemProps extends VariantProps<typeof fileItem> {
   size: number
 }
 
-export function FileItem({ name, size, state }: FileItemProps) {
+export const FileItem:React.FC<FileItemProps> = ({ name, size, state }) => {
   const { container, icon, deleteButton } = fileItem({ state })
 
   return (
